@@ -1,122 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset = "UTF-8">
-		<meta  name = "viewport" content="width-device-width", initial-scale = "1">
-		<title>ppi calculater</title>
-		<link rel = "stylesheet" href = "css/bootstrap.css">
-		<link rel = "stylesheet" href = "css/ppiCalc.css">
-	
-	
-	</head>
-	<body onload="getRes()">
-	
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width" , initial-scale="1">
+	<title>홈부르</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/community.css">
+</head>
+
+<body onload="getRes()">
+
 	<!-- 로고랑 토글네비바 -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
-		  <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Brand</a>
-		  </div>
-	  
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-			  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-			  <li><a href="#">Link</a></li>
-			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				  <li><a href="#">Action</a></li>
-				  <li><a href="#">Another action</a></li>
-				  <li><a href="#">Something else here</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#">Separated link</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#">One more separated link</a></li>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+				<img class="navbar-brand" src="images/Beer_Edit.png" alt="title_menu" height="25px">
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item"><a href="#">로그인</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">더보기</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">---</a></li>
+							<li><a href="#">---</a></li>
+							<li><a href="#">---</a></li>
+							<li class="divider"></li>
+							<li><a href="#">---</a></li>
+						</ul>
+					</li>
 				</ul>
-			  </li>
-			</ul>
-			<form class="navbar-form navbar-left" role="search">
-			  <div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			  </div>
-			  <button type="submit" class="btn btn-default">Submit</button>
-			</form>
-			<ul class="nav navbar-nav navbar-right">
-			  <li><a href="#">Link</a></li>
-			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				  <li><a href="#">Action</a></li>
-				  <li><a href="#">Another action</a></li>
-				  <li><a href="#">Something else here</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#">Separated link</a></li>
-				</ul>
-			  </li>
-			</ul>
-		  </div><!-- /.navbar-collapse -->
+			</div>
+		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
-	  </nav>
-    
+	</nav>
+
+
+
 	<!-- 디바이스 선택하는 부분 -->
-	<style>
-		.btn{
-			background-color: #ffffff;
-			border: none;
-		}
-	</style>
-    <div class="container-fluid-product">
-    
-		<h4>제품을 선택해주세요 </h4>
-		<div class="col-sm-2 container-fluid"><span></span></div>
-    	<div class="col-sm-2" onclick="getBtnValue('p')"><button class="btn" id="btn-p" type="submit">
-    		<img class="btn-img " src="images/smartphone.png"></button></div>
-    	<div class="col-sm-2" onclick="getBtnValue('t')"><button class="btn" id="btn-p" type="submit">
-    		<img class="btn-img" src="images/tablet.png"></button></div>
-    	<div class="col-sm-2" onclick="getBtnValue('l')"><button class="btn" id="btn-p" type="submit">
-    		<img class="btn-img" src="images/laptop.png"></button></div>
-    	<div class="col-sm-2" onclick="getBtnValue('m')"><button class="btn" id="btn-p" type="submit">
-    		<img class="btn-img" src="images/moniter.png"></button></div>
-    	<div class="col-sm-2 container-fluid"><span></span></div>
-    	
-    </div>
-    <!-- 입력 및 결과 출력하는 부분 -->
-    <div class="container-fluid-result">
-    <!-- 해상도 및 인치 입력 부분 -->
-    	<div class="row container-fluid">
-	    	<div class="col-sm-2 container-fluid"><span></span></div>
-	    	<div class="col-sm-4" id="entry_box">
-	    		<h4>디스플레이의 정보를 입력해주세요</h4>
-	    		<p><p>
-	    		<form name="dpiCalculator" method="get">
-						<table class="col-sm-12">
-							<tr>
-								<td>수평 픽셀<br/>
-								<input id = "resolutionHorizen" name="x" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"/></td>
-							</tr>
-							<tr>	
-								<td>수직 픽셀<br>
-								<input id = "resolutionVertical" name="y" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"></td>
-							</tr>
-							<tr>
-								<td>인치(<span id="zMetric">...</span>cm)<br/>
-								<input id = "inchInput" name="z" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"> 
-							</tr>	
-						</table>
-				</form>
-	    		<p>
-	    	
-	    	</div>
-	    	<!-- ppi점수 출력 부분 -->
-	    	<div class="col-sm-4">
+
+
+	<div class="container-fluid" id="divMainImg">
+		<img src="images/communityMain.png">
+
+	</div>
+	<!-- 입력 및 결과 출력하는 부분 -->
+	<div class="container-fluid-result">
+		<!-- 해상도 및 인치 입력 부분 -->
+		<div class="row container-fluid">
+			<div class="col-sm-2 container-fluid"><span></span></div>
+			<div class="col-sm-4" id="entry_box">
+				<h4>디스플레이의 정보를 입력해주세요</h4>
+				<p>
+					<p>
+						<form name="dpiCalculator" method="get">
+							<table class="col-sm-12">
+								<tr>
+									<td>수평 픽셀<br />
+										<input id="resolutionHorizen" name="x" size="8" onkeyup="dpiCalc(this.form)"
+											type="text" maxlength="7" /></td>
+								</tr>
+								<tr>
+									<td>수직 픽셀<br>
+										<input id="resolutionVertical" name="y" size="8" onkeyup="dpiCalc(this.form)"
+											type="text" maxlength="7"></td>
+								</tr>
+								<tr>
+									<td>인치(<span id="zMetric">...</span>cm)<br />
+										<input id="inchInput" name="z" size="8" onkeyup="dpiCalc(this.form)" type="text"
+											maxlength="7">
+								</tr>
+							</table>
+						</form>
+						<p>
+
+			</div>
+			<!-- ppi점수 출력 부분 -->
+			<div class="col-sm-4">
 				<div class="container-fluid" id="resultimg">
 					<img src="images/showppi.png" class="img-responsive">
 					<div class="carousel-caption" id="resultppi">
@@ -125,37 +95,40 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-sm-2 container-fluid"><span></span></div>
 		</div>
-		
+
 		<!-- 서브적인 설명이 들어간 부분 -->
 		<div class="container-fulid" id=subinfo>
-			<br><h4>"<span id="strCompareDevice">...</span>" 보다
-					<span id="strCompareRemain">0</span>점
-					<span id="strCompareHeightLow">...</span>습니다.</h4>
-			<h5>PPI는 Pixels Per Inch의 약자로서 해상도의 밀도 단위이다.</h5><p>
-			도트 간격: <span id="dotPitch">0</span><br/>
-			사이즈: <span id="displaySize">0</span> (<span id="displaySizeMetric">0</span>)<br/>
-			화면비: <span id="aspectRatioFraction">0</span> (<span id="aspectRatio">0</span>)<br/>
-			픽셀 수: <span id="pixelCount">0</span> <br/>
+			<br>
+			<h4>"<span id="strCompareDevice">...</span>" 보다
+				<span id="strCompareRemain">0</span>점
+				<span id="strCompareHeightLow">...</span>습니다.</h4>
+			<h5>PPI는 Pixels Per Inch의 약자로서 해상도의 밀도 단위이다.</h5>
+			<p>
+				도트 간격: <span id="dotPitch">0</span><br />
+				사이즈: <span id="displaySize">0</span> (<span id="displaySizeMetric">0</span>)<br />
+				화면비: <span id="aspectRatioFraction">0</span> (<span id="aspectRatio">0</span>)<br />
+				픽셀 수: <span id="pixelCount">0</span> <br />
 		</div>
-		
+
 	</div>
 
-    <div class="container-fluid-show">
-    
-    <!-- 랭킹이 나오는 부분 -->
-    	<div class="col-sm-2 container-fluid"><span></span></div>
-    	<div class="col-sm-4">
-    		<h4>"<span id="strProduct">...</span>" TOP10 PPI랭킹</h4><p>
-    		<h5><span id="strRank">...</span></h5>
-    	</div>
-    	
-    	<!-- 시각적 출력 해주는 부분 -->
-    	<div class="col-sm-4">
-    		<h4>디스플레이 데이터베이스</h4>
-    		<h5>해상도를 선택하세요</h5>
+	<div class="container-fluid-show">
+
+		<!-- 랭킹이 나오는 부분 -->
+		<div class="col-sm-2 container-fluid"><span></span></div>
+		<div class="col-sm-4">
+			<h4>"<span id="strProduct">...</span>" TOP10 PPI랭킹</h4>
+			<p>
+				<h5><span id="strRank">...</span></h5>
+		</div>
+
+		<!-- 시각적 출력 해주는 부분 -->
+		<div class="col-sm-4">
+			<h4>디스플레이 데이터베이스</h4>
+			<h5>해상도를 선택하세요</h5>
 			<select name="resolution" id="resolution" onchange="setResolutionBox()">
 				<option selected disabled>-------------- 선택하세요 -------------</option>
 				<option value="1280x720">1280x720 HDTV, 720p</option>
@@ -170,38 +143,40 @@
 				<option value="3840x2160">3840x2160 QFHD, 4K, UltraHD, UHD-1</option>
 				<option value="5120x2880">5120x2880 5K</option>
 			</select>
-			
+
 			<p>
-			
-			<h5>인치를 선택하세요</h5>
-			<select name="inch" id="inch" onchange="setInchBox()">
-				<option selected disabled>-- 선택하세요 --</option>			
-				<option value="9.7">9.7 inch</option>
-				<option value="15.6">15.6 inch</option>
-				<option value="17">17 inch</option>
-				<option value="21.5">21.5 inch</option>
-				<option value="24">24 inch</option>
-				<option value="27">27 inch</option>
-				<option value="32">32 inch</option>
-				<option value="42">42 inch</option>
-			</select>
-			
+
+				<h5>인치를 선택하세요</h5>
+				<select name="inch" id="inch" onchange="setInchBox()">
+					<option selected disabled>-- 선택하세요 --</option>
+					<option value="9.7">9.7 inch</option>
+					<option value="15.6">15.6 inch</option>
+					<option value="17">17 inch</option>
+					<option value="21.5">21.5 inch</option>
+					<option value="24">24 inch</option>
+					<option value="27">27 inch</option>
+					<option value="32">32 inch</option>
+					<option value="42">42 inch</option>
+				</select>
+
 		</div>
 		<div class="col-sm-2 container-fluid"><span></span></div>
 	</div>
-    
-    <!-- 푸터 부분 -->
-    <footer style="background-color: #F2F2F2"; border-color: border-color: #CFCFCF;>
-    <div class="container">
-    	<p>
-    	<div class="col-sm-12" style="text-align: center;">@2019 Copyright <p>
-    	&copy; Junseo Park(박준서) Eunho Kang(강은호)<p> </div>    	
-    </div>
-    
-    </footer> 
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-       
-	</body>
+
+	<!-- 푸터 부분 -->
+	<footer style="background-color: #F2F2F2" ; border-color: border-color: #CFCFCF;>
+		<div class="container">
+			<p>
+				<div class="col-sm-12" style="text-align: center;">@2019 Copyright <p>
+						&copy; Junseo Park(박준서) Eunho Kang(강은호)<p>
+				</div>
+		</div>
+
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+</body>
+
 </html>
