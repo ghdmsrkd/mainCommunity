@@ -1,0 +1,72 @@
+
+@import url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HCRDotum.woff); 
+/*전체 폰트*/
+*{
+	font-family: 'HCRDotum';
+}
+/*내비바의 스타일 */
+.navbar-default {	
+	background-color: white;
+	border-color: #CFCFCF;
+	padding-right: 10px;
+}
+
+ /*제품 선택 버튼들 스타일*/
+#divMainImg{
+	padding-top: 70px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+
+	text-align: center;
+}
+
+#mainImg{
+	background-color: white;
+}
+
+/*디바이스 선택 버튼 스타일*/
+
+
+/*결과 출력하는 컨테이너 라인의 스타일*/
+.container-fluid-result{
+	background-color: white;
+	
+	padding-right: 150px;
+ 	padding-left: 150px;
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
+ 	
+  	margin-right: auto;
+  	margin-left: auto;
+  	
+	text-align: center;
+	  
+	height: 250px;
+}
+
+#myCarousel{
+	height: 200px;
+	padding: auto, auto, 50px, 50px;
+}
+
+.item{
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.carousel-inner{
+
+}
+@media(max-width:767px){
+
+}
+@media(min-width:768px){
+
+}
+@media(min-width:992px){
+
+}
+@media(min-width:1200px){
+	
+}
