@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta  name = "viewport" content="width-device-width", initial-scale = "1">
+		<title>ppi calculater</title>
+		<link rel = "stylesheet" href = "css/bootstrap.css">
+		<link rel = "stylesheet" href = "css/ppiCalc.css">
+		<link rel = "stylesheet" type="text/css" href="css/myfeed.css"></link>
+		<script src="js/jquery.min.js"></script>
+	
+	</head>
+	<body onload="getRes()">
+	
+	<!-- 로고랑 토글네비바 -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Brand</a>
+		  </div>
+	  
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">One more separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+			  <div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	  </nav>
+    
+	<!-- 디바이스 선택하는 부분 -->
+	<style>
+		.btn{
+			background-color: #ffffff;
+			border: none;
+		}
+	</style>
+    <div class="container-fluid-product">
+    
+		<h4>제품을 선택해주세요 </h4>
+		<div class="col-sm-2 container-fluid"><span></span></div>
+    	<div class="col-sm-2" onclick="getBtnValue('p')"><button class="btn" id="btn-p" type="submit">
+    		<img class="btn-img " src="images/smartphone.png"></button></div>
+    	<div class="col-sm-2" onclick="getBtnValue('t')"><button class="btn" id="btn-p" type="submit">
+    		<img class="btn-img" src="images/tablet.png"></button></div>
+    	<div class="col-sm-2" onclick="getBtnValue('l')"><button class="btn" id="btn-p" type="submit">
+    		<img class="btn-img" src="images/laptop.png"></button></div>
+    	<div class="col-sm-2" onclick="getBtnValue('m')"><button class="btn" id="btn-p" type="submit">
+    		<img class="btn-img" src="images/moniter.png"></button></div>
+    	<div class="col-sm-2 container-fluid"><span></span></div>
+    	
+    </div>
+    <!-- 입력 및 결과 출력하는 부분 -->
+    <div class="container-fluid-result">
+    <!-- 해상도 및 인치 입력 부분 -->
+    	<div class="row container-fluid">
+	    	<div class="col-sm-2 container-fluid"><span></span></div>
+	    	<div class="col-sm-4" id="entry_box">
+	    		<h4>디스플레이의 정보를 입력해주세요</h4>
+	    		<p><p>
+	    		<form name="dpiCalculator" method="get">
+						<table class="col-sm-12">
+							<tr>
+								<td>수평 픽셀<br/>
+								<input id = "resolutionHorizen" name="x" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"/></td>
+							</tr>
+							<tr>	
+								<td>수직 픽셀<br>
+								<input id = "resolutionVertical" name="y" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"></td>
+							</tr>
+							<tr>
+								<td>인치(<span id="zMetric">...</span>cm)<br/>
+								<input id = "inchInput" name="z" size="8" onkeyup="dpiCalc(this.form)" type="text" maxlength="7"> 
+							</tr>	
+						</table>
+				</form>
+	    		<p>
+	    	
+	    	</div>
+	    	<!-- ppi점수 출력 부분 -->
+	    	<div class="col-sm-4">
+				<div class="container-fluid" id="resultimg">
+					<img src="images/showppi.png" class="img-responsive">
+					<div class="carousel-caption" id="resultppi">
+						<h4>당신의 PPI점수는</h4>
+						<h4><span id="dpi">0</span>점 입니다.</h4>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-sm-2 container-fluid"><span></span></div>
+		</div>
+		
+		<!-- 서브적인 설명이 들어간 부분 -->
+		<div class="container-fulid" id=subinfo>
+			<br><h4>"<span id="strCompareDevice">...</span>" 보다
+					<span id="strCompareRemain">0</span>점
+					<span id="strCompareHeightLow">...</span>습니다.</h4>
+			<h5>PPI는 Pixels Per Inch의 약자로서 해상도의 밀도 단위이다.</h5><p>
+			도트 간격: <span id="dotPitch">0</span><br/>
+			사이즈: <span id="displaySize">0</span> (<span id="displaySizeMetric">0</span>)<br/>
+			화면비: <span id="aspectRatioFraction">0</span> (<span id="aspectRatio">0</span>)<br/>
+			픽셀 수: <span id="pixelCount">0</span> <br/>
+		</div>
+	</div>
+    
+   	<div id="container-fluid">
+		<div id="instagram-container">
+		<div id="instagram-myfeed"></div>
+		<script>
+			var access_token="18083537979.0b909cc.dfca3fa2bf5a4d9fa59f3f6fd10619b6";
+			var api_endpoint="https://api.instagram.com/v1/users/self/media/recent/?access_token=" + access_token; 
+
+			$.get( api_endpoint, function( json ) {
+		
+			var instabanner = $('#instagram-myfeed');
+			var ouputHtml = "";
+			ouputHtml += '<ul class="myfeed">';
+		
+			var limit = 12;
+			var myfeed = json.data;
+			for (var i = 0; i < limit; i++) {
+				
+				ouputHtml += '<li>';
+				ouputHtml += '<a href="'+myfeed[i].link+'" target="_blank">';
+				ouputHtml += '<img src="'+myfeed[i].images.low_resolution.url+'" class="img-insta" />';
+				ouputHtml += '</a>';
+				ouputHtml += '</li>';
+			}
+		
+			ouputHtml += "</ul>";	
+			instabanner.html( ouputHtml );
+		
+			});//end get
+		</script>
+		</div><!--end instagram-container-->
+	</div><!--end container-fluid-->
+    	
+    <!-- 푸터 부분 -->
+    <footer style="background-color: #F2F2F2"; border-color: border-color: #CFCFCF;>
+    <div class="container">
+    	<p>
+    	<div clasf="col-sm-12" style="text-align: center;">@2019 Copyright <p>
+    	&copy; Junseo Park(박준서) Eunho Kang(강은호)<p> </div>    	
+    </div>
+    
+    </footer> 
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+
+	</body>
+</html>
