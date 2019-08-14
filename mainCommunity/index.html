@@ -16,6 +16,7 @@
 		}
 	</script>
 	<body onload="getRes()">
+	<body style="overflow-x:hidden">
 	
 	<!-- 로고랑 토글네비바 -->
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -74,10 +75,10 @@
 			slideText[2] = "맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다.  1. 발효에 필요한 당(Sugar)을 제공하기 2. 붉은색, 검은색 등의 색상을 내기 3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공 4. 맥주의 무게감 상승   아...";
 			slideText[3] = "맥주의 맛을 논할 때 가장 많이 등장하는 표현이 프루티(Fruity)입니다. '과일 맛이 나는' 에 해당하는 단어로 사실 맥주의 재료와 스타일에 따라 과일의 맛은 정말 다양한 형태로 나타납니다. 홉(Hop)을 많이 사용...";
 			
-			document.getElementById("slideTitle0").innerHTML = slideTitle[0].substr([0][slideAmount]);
-
-			document.getElementById("slideText0").innerHTML = slideText[0].substr([0][slideAmount]);
-
+			for(var j = 0; j < slideAmount; j++) {
+				document.getElementById("slideTitle" + j).innerHTML = slideTitle[j].substr([j][slideAmount]);
+				document.getElementById("slideText" + j).innerHTML = slideText[j].substr([j][slideAmount]);
+			}
 		}
 		
 	</script>
@@ -95,36 +96,27 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 				  <div class="item active">
-					<h2><span id="slideTitle0"></span></h1>  
+					<h3><span id="slideTitle0"></span></h3>  
 					<h5><span id="slideText0"></span></h5>
 					
 				  </div>
 			  
 				  <div class="item">
-					<h2>기능성 맥아들에 관한 이야기</h1>
-						<h5>맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다. 
-							1. 발효에 필요한 당(Sugar)을 제공하기
-							2. 붉은색, 검은색 등의 색상을 내기
-							3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공
-							4. 맥주의 무게감 상승</h3>
+					<h3><span id="slideTitle1"></span></h3>  
+					<h5><span id="slideText1"></span></h5>
+					
 				  </div>
 			  
 				  <div class="item">
-					<h2>기능성 맥아들에 관한 이야기</h1>
-						<h5>맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다. 
-							1. 발효에 필요한 당(Sugar)을 제공하기
-							2. 붉은색, 검은색 등의 색상을 내기
-							3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공
-							4. 맥주의 무게감 상승</h3>
+					<h3><span id="slideTitle2"></span></h3>  
+					<h5><span id="slideText2"></span></h5>
+					
 				  </div>
-			  
+
 				  <div class="item">
-					<h2>기능성 맥아들에 관한 이야기</h1>
-						<h5>맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다. 
-							1. 발효에 필요한 당(Sugar)을 제공하기
-							2. 붉은색, 검은색 등의 색상을 내기
-							3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공
-							4. 맥주의 무게감 상승</h3>
+					<h3><span id="slideTitle3"></span></h3>  
+					<h5><span id="slideText3"></span></h5>
+					
 				  </div>
 				</div>
 			  

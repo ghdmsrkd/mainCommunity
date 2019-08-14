@@ -38,10 +38,24 @@
  	
   	margin-right: auto;
   	margin-left: auto;
-  	
+ 
 	text-align: center;
 	  
 	height: 250px;
+}
+
+.carousel-inner h3 {
+	font-size: 2vw;
+}
+
+.carousel-inner h5 {
+	white-space: normal;
+	line-height: 1.2;
+	height: 4em;
+	word-wrap: break-word;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 
 #myCarousel{
