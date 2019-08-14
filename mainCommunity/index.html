@@ -58,7 +58,7 @@
 	<script>
 		function slideStr(){
 			var slideAmount = 4;
-			var textAnount = 50;
+			var textAmount = 50;
 			var slideTitle = new Array(slideAmount);
 			var slideText = new Array(slideAmount);
 			for(var i = 0; i < slideAmount; i++){
@@ -75,9 +75,9 @@
 			slideText[2] = "맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다.  1. 발효에 필요한 당(Sugar)을 제공하기 2. 붉은색, 검은색 등의 색상을 내기 3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공 4. 맥주의 무게감 상승   아...";
 			slideText[3] = "맥주의 맛을 논할 때 가장 많이 등장하는 표현이 프루티(Fruity)입니다. '과일 맛이 나는' 에 해당하는 단어로 사실 맥주의 재료와 스타일에 따라 과일의 맛은 정말 다양한 형태로 나타납니다. 홉(Hop)을 많이 사용...";
 			
-			for(var j = 0; j < slideAmount; j++) {
-				document.getElementById("slideTitle" + j).innerHTML = slideTitle[j].substr([j][slideAmount]);
-				document.getElementById("slideText" + j).innerHTML = slideText[j].substr([j][slideAmount]);
+			for(var i = 0; i < slideAmount; i++) {
+				document.getElementById("slideTitle" + j).innerHTML; /* = slideTitle[j].substr([0][textAmount]); */
+				document.getElementById("slideText" + j).innerHTML; /* = slideText[j].substr([0][textAmount]); */
 			}
 		}
 		
@@ -85,14 +85,7 @@
     <div class="container-fluid-result">
 		
 			<div id="myCarousel" class="carousel slide carousel-fade" data-wrap="true" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-				  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				  <li data-target="#myCarousel" data-slide-to="1"></li>
-				  <li data-target="#myCarousel" data-slide-to="2"></li>
-				  <li data-target="#myCarousel" data-slide-to="3"></li>
-				</ol>
-			  
+				
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 				  <div class="item active">
