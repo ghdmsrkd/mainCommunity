@@ -37,7 +37,7 @@ img {
 	max-width: 100%;
 	width:820px;
 	margin:0 auto;
-	margin-top: 30px;
+	margin-top: 1.5px;
 	margin-bottom: 30px;
 	text-align: center;
 }
@@ -69,4 +69,11 @@ ul.myfeed li a:hover {
 	-webkit-transition:opacity 0.5s;
 	-moz-transition:opacity 0.5s;
 	-o-transition: opacity 0.5s;
+}
+@media(max-width:410px){
+	ul.myfeed li img {
+		width:160px;
+		height: 160px;
+		object-fit: cover;
+	}
 }

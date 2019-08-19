@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset = "UTF-8">
-		<meta  name = "viewport" content="width-device-width", initial-scale = "1">
-		<title> Beer Edit :: 내가 만들어 먹는 맥주 </title>
-		<link rel = "stylesheet" href = "css/bootstrap.css">
-		<link rel="stylesheet" href="css/community.css">
-		<link rel = "stylesheet" type="text/css" href="css/myfeed.css"></link>
-		<script src="js/jquery.min.js"></script>
-	
-	</head>
-	<script>
-		function getRes(){
-			slideStr();
-		}
-	</script>
-	<body onload="getRes()">
+
+<head>
+	<meta http-equiv="Pragma" content="no-cache">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover', initial-scale=1, user-scalable=no, shrink-to-fit=no">
+	<title> Beer Edit :: 내가 만들어 먹는 맥주 </title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/community.css">
+	<link rel="stylesheet" type="text/css" href="css/myfeed.css">
+	</link>
+	<script src="js/jquery.min.js"></script>
+
+</head>
+<script>
+	function getRes() {
+		slideStr();
+	}
+</script>
+
+<body onload="getRes()">
+
 	<body style="overflow-x:hidden">
-	
-	<!-- 로고랑 토글네비바 -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+
+		<!-- 로고랑 토글네비바 -->
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
 					<img class="navbar-brand" src="images/Beer_Edit.png" alt="title_menu" height="25px">
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item"><a href="#">로그인</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">더보기</a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+								aria-expanded="false">더보기</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">---</a></li>
 								<li><a href="#">---</a></li>
@@ -51,125 +58,133 @@
 			</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-    
-    <div class="container-fluid" id="divMainImg">
-			<img src="images/communityMain.png">
-	</div>
-	<script>
-		function slideStr(){
-			var slideAmount = 4;
-			var textAmount = 50;
-			var slideTitle = new Array(slideAmount);
-			var slideText = new Array(slideAmount);
-			for(var i = 0; i < slideAmount; i++){
-				slideTitle[i] = '';
-				slideText[i] = '';
-			}
-			slideTitle[0] = '아로마 호핑(Aroma Hopping). 절제가 필요할 때도';
-			slideTitle[1] = '슬로베니아(Slovenia)의 홉들';
-			slideTitle[2] = '기능성 맥아들에 관한 이야기';
-			slideTitle[3] = '어두운 맥주의 과일 맛 대표: 검붉은 과일';
 
-			slideText[0] = "홈브루 교육이 여러기관에서 활성화 되고 있습니다. 저도 역시 몇몇 사람들에게 홈브루잉을 알려주고 있는 상황입니다. 항상 홈브루잉을 가르쳐주면서 생각하는 부분은 '어느정도 까지의 디테일을 알려줘야할까?' 입...";
-			slideText[1] = "슬로베니아(Slovenia)는 유럽의 독립국가로 이탈리아의 오른쪽, 오스트리아의 남쪽, 크로아티아 북쪽에 위치했습니다. 체코슬로바키아에서 분리된 슬로바키아(Slovakia)와 혼동되기도 하지만 둘은 엄연히 다른 국가...";
-			slideText[2] = "맥아(Malt)가 맥주의 재료로 쓰이는 이유는 다음과 같습니다.  1. 발효에 필요한 당(Sugar)을 제공하기 2. 붉은색, 검은색 등의 색상을 내기 3. 카라멜이나 시럽, 초컬릿 등의 맛을 제공 4. 맥주의 무게감 상승   아...";
-			slideText[3] = "맥주의 맛을 논할 때 가장 많이 등장하는 표현이 프루티(Fruity)입니다. '과일 맛이 나는' 에 해당하는 단어로 사실 맥주의 재료와 스타일에 따라 과일의 맛은 정말 다양한 형태로 나타납니다. 홉(Hop)을 많이 사용...";
-			
-			for(var i = 0; i < slideAmount; i++) {
-				document.getElementById("slideTitle" + j).innerHTML; /* = slideTitle[j].substr([0][textAmount]); */
-				document.getElementById("slideText" + j).innerHTML; /* = slideText[j].substr([0][textAmount]); */
+		<div class="container-fluid" id="divMainImg">
+			<img src="images/communityMain.png">
+		</div>
+		<script>
+			function slideStr() {
+				var slideAmount = 4;
+				var textAnount = 50;
+				var slideTitle = new Array(slideAmount);
+				var slideText = new Array(slideAmount);
+				for (var i = 0; i < slideAmount; i++) {
+					slideTitle[i] = '';
+					slideText[i] = '';
+				}
+				slideTitle[0] = '아로마 호핑(Aroma Hopping). 절제가 필요할 때도';
+				slideTitle[1] = '슬로베니아(Slovenia)의 홉들';
+				slideTitle[2] = '기능성 맥아들에 관한 이야기';
+				slideTitle[3] = '어두운 맥주의 과일 맛 대표: 검붉은 과일';
+
+				slideText[0] = "By 조용균";
+				slideText[1] = "By 강은호";
+				slideText[2] = "By 박준서";
+				slideText[3] = "By 이용진";
+
+				for (var j = 0; j < slideAmount; j++) {
+					document.getElementById("slideTitle" + j).innerHTML = slideTitle[j].substr([j][slideAmount]);
+					document.getElementById("slideText" + j).innerHTML = slideText[j].substr([j][slideAmount]);
+				}
 			}
-		}
-		
-	</script>
-    <div class="container-fluid-result">
-		
+
+		</script>
+		<div class="container-fluid-result">
+			<div class="container" id="carouselTitle"><h3>홈브루잉 이야기</h3></div>
 			<div id="myCarousel" class="carousel slide carousel-fade" data-wrap="true" data-ride="carousel">
-				
+
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
-				  <div class="item active">
-					<h3><span id="slideTitle0"></span></h3>  
-					<h5><span id="slideText0"></span></h5>
-					
-				  </div>
-			  
-				  <div class="item">
-					<h3><span id="slideTitle1"></span></h3>  
-					<h5><span id="slideText1"></span></h5>
-					
-				  </div>
-			  
-				  <div class="item">
-					<h3><span id="slideTitle2"></span></h3>  
-					<h5><span id="slideText2"></span></h5>
-					
-				  </div>
+					<div class="item active">
+						<h3><span id="slideTitle0"></span></h3>
+						<h5><span id="slideText0"></span></h5>
 
-				  <div class="item">
-					<h3><span id="slideTitle3"></span></h3>  
-					<h5><span id="slideText3"></span></h5>
-					
-				  </div>
+					</div>
+
+					<div class="item">
+						<h3><span id="slideTitle1"></span></h3>
+						<h5><span id="slideText1"></span></h5>
+
+					</div>
+
+					<div class="item">
+						<h3><span id="slideTitle2"></span></h3>
+						<h5><span id="slideText2"></span></h5>
+
+					</div>
+
+					<div class="item">
+						<h3><span id="slideTitle3"></span></h3>
+						<h5><span id="slideText3"></span></h5>
+
+					</div>
 				</div>
-			  
+
 				<!-- Left and right controls -->
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
 				</a>
 				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
 				</a>
-			  </div>
-	</div>
-    
-   	<div id="container-fluid">
-		<div id="instagram-container">
-		<div id="instagram-myfeed"></div>
-		<script>
-			var access_token="18083537979.0b909cc.dfca3fa2bf5a4d9fa59f3f6fd10619b6";
-			var api_endpoint="https://api.instagram.com/v1/users/self/media/recent/?access_token=" + access_token; 
+			</div>
+		</div>
 
-			$.get( api_endpoint, function( json ) {
-		
-			var instabanner = $('#instagram-myfeed');
-			var ouputHtml = "";
-			ouputHtml += '<ul class="myfeed">';
-		
-			var limit = 12;
-			var myfeed = json.data;
-			for (var i = 0; i < limit; i++) {
-				
-				ouputHtml += '<li>';
-				ouputHtml += '<a href="'+myfeed[i].link+'" target="_blank">';
-				ouputHtml += '<img src="'+myfeed[i].images.low_resolution.url+'" class="img-insta" />';
-				ouputHtml += '</a>';
-				ouputHtml += '</li>';
-			}
-		
-			ouputHtml += "</ul>";	
-			instabanner.html( ouputHtml );
-		
-			});//end get
-		</script>
-		</div><!--end instagram-container-->
-	</div><!--end container-fluid-->
-    	
-    <!-- 푸터 부분 -->
-    <footer style="background-color: #F2F2F2"; border-color: border-color: #CFCFCF;>
-    <div class="container">
-    	<p>
-    	<div clasf="col-sm-12" style="text-align: center;">@2019 Copyright <p>
-    	&copy; Junseo Park(박준서) Eunho Kang(강은호)<p> </div>    	
-    </div>
-    
-    </footer> 
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    
+		<div id="container-fluid">
+			<div class="container" id="instarInfo"><h4>BeerEdit 과 홈브루잉에 대해 궁금하다면<br/>
+					BeerEdit 인스타그램을 팔로우 해주세요!<br/>
+					 #홈브루잉 #정기배송 #수제맥주<br/></h5></div>
+			<div class="container" id="instarImg"><a><img src="images/instarImg.png" alt="instarImg" height="35px"></a></div>
+			<div id="instagram-container">
+				<div id="instagram-myfeed"></div>
+				<script>
+					var access_token = "1822454870.b00504e.5cb8ec7ce4504ce086b6648c4f97cf6a";
+					var api_endpoint = "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + access_token;
+
+					$.get(api_endpoint, function (json) {
+
+						var instabanner = $('#instagram-myfeed');
+						var ouputHtml = "";
+						ouputHtml += '<ul class="myfeed">';
+
+						var limit = 8;
+						var myfeed = json.data;
+						for (var i = 0; i < limit; i++) {
+
+							ouputHtml += '<li>';
+							ouputHtml += '<a href="' + myfeed[i].link + '" target="_blank">';
+							ouputHtml += '<img src="' + myfeed[i].images.low_resolution.url + '" class="img-insta" />';
+							ouputHtml += '</a>';
+							ouputHtml += '</li>';
+						}
+
+						ouputHtml += "</ul>";
+						instabanner.html(ouputHtml);
+
+					});//end get
+				</script>
+			</div>
+			<!--end instagram-container-->
+		</div>
+		<!--end container-fluid-->
+
+		<!-- 푸터 부분 -->
+		<footer style="background-color: #F2F2F2" ; border-color: border-color: #CFCFCF;>
+			<div class="container">
+				<p>
+					<div clasf="col-sm-12" style="text-align: center;">@2019 Copyright <p>
+							&copy; Junseo Park(박준서) Eunho Kang(강은호)<p>
+					</div>
+			</div>
+
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
 
 	</body>
+
 </html>
