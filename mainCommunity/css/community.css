@@ -1,6 +1,7 @@
 
 @import url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/HCRDotum.woff); 
 /*전체 폰트*/
+
 *{
 	font-family: 'HCRDotum';
 }
@@ -20,8 +21,8 @@
 	text-align: center;
 }
 
-#mainImg{
-	background-color: white;
+#divMainImg img{
+	height: 200px;
 }
 
 /*디바이스 선택 버튼 스타일*/
@@ -66,6 +67,7 @@
 }
 
 .carousel-inner h5 {
+	font-size: 15px;
 	white-space: normal;
 	line-height: 1.2;
 	height: 4em;
@@ -94,17 +96,98 @@
 	text-align: center;
 	margin-top: 20px;
 }
-@media(max-width:767px){
+
+footer {
+    left:0px; 
+    bottom:0px; 
+    height:250px; 
+    width:100%; 
+    background-color: darkslategray; 
+    color: white;
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer_img {
+    
+    margin: 20px;
+}
+    
+.footer_script {
+    text-align: center;
+}
+
+@media(max-width:410px){
+	.container-fluid-result{
+		width: 350px;
+		height: 300px;
+	}
+	.carousel-inner h3 {
+		font-size: 14px;
+		text-align: center;
+	}
+	.carousel-inner h5{
+		font-size: 10px;
+	}
+	#divMainImg img{
+		height: 100px;
+	}
+	.item{
+		padding-top: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	
+}
+@media(min-width:411px){
+	.container-fluid-result{
+		width: 400px;
+		height: 300px;
+	}
+	.carousel-inner h3 {
+		font-size: 14px;
+		text-align: center;
+	}
+	.carousel-inner h5{
+		font-size: 10px;
+	}
+	#divMainImg img{
+		height: 100px;
+	}
+	
+}
+@media(min-width:610px){
+	.container-fluid-result{
+		width: 610px;
+		height: 300px;
+	}
+	.carousel-inner h3 {
+		font-size: 20px;
+		text-align: center;
+	}
+	.carousel-inner h5{
+		font-size: 14px;
+	}
+	#divMainImg img{
+		height: 200px;
+	}
+	.item{
+		padding-top: 50px;
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+}
+@media(min-width:768px){
 	.container-fluid-result{
 		width: 610px;
 		height: 300px;
 	}
 }
-@media(min-width:768px){
-
-}
 @media(min-width:992px){
-
+	.container-fluid-result{
+		width: 820px;
+		height: 300px;
+	}
 }
 @media(min-width:1200px){
 	
