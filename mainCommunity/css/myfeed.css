@@ -70,3 +70,10 @@ ul.myfeed li a:hover {
 	-moz-transition:opacity 0.5s;
 	-o-transition: opacity 0.5s;
 }
+@media(max-width:410px){
+	ul.myfeed li img {
+		width:160px;
+		height: 160px;
+		object-fit: cover;
+	}
+}

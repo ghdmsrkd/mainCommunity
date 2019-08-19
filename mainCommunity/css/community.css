@@ -5,6 +5,14 @@
 *{
 	font-family: 'HCRDotum';
 }
+
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
 /*내비바의 스타일 */
 .navbar-default {	
 	background-color: white;
@@ -31,7 +39,7 @@
 /*결과 출력하는 컨테이너 라인의 스타일*/
 .container-fluid-result{
 	background-color: white;
-	width: 830px;
+	
 	height: 300px;
 
 	padding-top: 30px;
@@ -183,7 +191,9 @@ footer {
 		height: 300px;
 	}
 }
-@media(min-width:992px){
+
+
+@media(min-width:812px){
 	.container-fluid-result{
 		width: 820px;
 		height: 300px;
