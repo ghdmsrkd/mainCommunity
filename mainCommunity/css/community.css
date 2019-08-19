@@ -30,22 +30,39 @@
 /*결과 출력하는 컨테이너 라인의 스타일*/
 .container-fluid-result{
 	background-color: white;
-	
-	padding-right: 150px;
- 	padding-left: 150px;
- 	padding-top: 30px;
+	width: 830px;
+	height: 300px;
+
+	padding-top: 30px;
  	padding-bottom: 30px;
  	
   	margin-right: auto;
   	margin-left: auto;
  
 	text-align: center;
-	  
-	height: 250px;
+}	  
+
+#myCarousel{
+	height: 170px;
+	padding: auto, auto, 50px, 50px;
+	border: 3px solid #CFCFCF;
+	border-radius: 50px, 50px, 50px, 50px;
+}
+
+.item{
+	padding-top: 50px;
+	padding-left: 120px;
+	padding-right: 120px;
+}
+	
+.carousel-control {
+	background: none !important; 
+
 }
 
 .carousel-inner h3 {
-	font-size: 2vw;
+	font-size: 20px;
+	text-align: center;
 }
 
 .carousel-inner h5 {
@@ -56,24 +73,32 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
+	text-align: right;
+}
+#carouselTitle{
+	margin-left: 0;
+	padding-left: 0;
 }
 
-#myCarousel{
-	height: 200px;
-	padding: auto, auto, 50px, 50px;
+#carouselTitle h3{
+	text-align: left;
+	
 }
 
-.item{
-	padding-top: 50px;
-	padding-left: 100px;
-	padding-right: 100px;
+#instarInfo h4{
+	text-align: center;
+	line-height: 150%;
+	font-size: 15px;
 }
-
-.carousel-inner{
-
+#instarImg{
+	text-align: center;
+	margin-top: 20px;
 }
 @media(max-width:767px){
-
+	.container-fluid-result{
+		width: 610px;
+		height: 300px;
+	}
 }
 @media(min-width:768px){
 
